@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/terminal.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JonkersAI - AI Telefoonsystemen voor Bedrijven</title>
+    <meta name="description" content="Transformeer uw telefonische klantenservice met AI.Callers. 24/7 beschikbare AI telefoonsystemen die natuurlijke gesprekken voeren en uw bedrijfsprocessen optimaliseren." />
+    <meta name="keywords" content="AI telefoon, AI callers, kunstmatige intelligentie, telefoonsysteem, klantenservice, automatisering, Nederland, bedrijfsoplossingen" />
+    <meta name="author" content="JonkersAI" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="JonkersAI - AI Telefoonsystemen voor Bedrijven" />
+    <meta property="og:description" content="Transformeer uw telefonische klantenservice met AI.Callers. 24/7 beschikbare AI telefoonsystemen die natuurlijke gesprekken voeren." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop" />
+    <meta property="og:url" content="https://jonkersai.nl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JonkersAI" />
+    <meta property="og:locale" content="nl_NL" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JonkersAI - AI Telefoonsystemen voor Bedrijven" />
+    <meta name="twitter:description" content="Transformeer uw telefonische klantenservice met AI.Callers. 24/7 beschikbare AI telefoonsystemen die natuurlijke gesprekken voeren." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jonkersai.nl" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "JonkersAI",
+      "description": "Transformeer uw telefonische klantenservice met AI.Callers. 24/7 beschikbare AI telefoonsystemen die natuurlijke gesprekken voeren en uw bedrijfsprocessen optimaliseren.",
+      "url": "https://jonkersai.nl",
+      "logo": "https://jonkersai.nl/terminal.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+31-6-12345678",
+        "contactType": "customer service",
+        "availableLanguage": "Dutch"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/jonkersai",
+        "https://twitter.com/jonkersai"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NL",
+        "addressLocality": "Nederland"
+      },
+      "offers": {
+        "@type": "Service",
+        "name": "AI.Callers",
+        "description": "AI telefoonsystemen voor bedrijven",
+        "provider": {
+          "@type": "Organization",
+          "name": "JonkersAI"
+        }
+      }
+    }
+    </script>
+    
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.71/build/spline-viewer.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Modern Vapi Voice Widget -->
+    <script>
+      var vapiInstance = null;
+      
+      // Assistant ID and API Key
+      const assistant = "e5de3be6-7236-497d-8ed9-301c27491c2d";
+      const apiKey = "13c0731f-dbde-4236-a9cd-fce5225d4b3d";
+      
+      // Modern button styling and configuration without icons
+      const buttonConfig = {
+        position: "bottom-right",
+        offset: "24px",
+        width: "70px",
+        height: "70px",
+        idle: {
+          color: `linear-gradient(135deg, #6366f1, #8b5cf6)`,
+          type: "pill",
+          title: "Spreek met onze AI",
+          subtitle: "Stel uw vraag",
+        },
+        loading: {
+          color: `linear-gradient(135deg, #3b82f6, #9333ea)`,
+          type: "pill",
+          title: "Verbinden...",
+          subtitle: "Een moment geduld",
+        },
+        active: {
+          color: `linear-gradient(135deg, #ef4444, #dc2626)`,
+          type: "pill",
+          title: "Gesprek actief",
+          subtitle: "Klik om te beëindigen",
+        },
+      };
+
+      (function (d, t) {
+        var g = document.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src =
+          "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g, s);
+
+        g.onload = function () {
+          vapiInstance = window.vapiSDK.run({
+            apiKey: apiKey,
+            assistant: assistant,
+            config: buttonConfig,
+          });
+          
+          // Enhanced event listeners with modern feedback
+          vapiInstance.on('call-start', () => {
+            console.log('AI gesprek gestart');
+            // Add subtle page overlay to indicate active call
+            document.body.style.setProperty('--vapi-overlay', 'rgba(99, 102, 241, 0.05)');
+          });
+          
+          vapiInstance.on('call-end', () => {
+            console.log('AI gesprek beëindigd');
+            // Remove overlay
+            document.body.style.removeProperty('--vapi-overlay');
+          });
+          
+          vapiInstance.on('speech-start', () => {
+            console.log('AI spreekt');
+          });
+          
+          vapiInstance.on('speech-end', () => {
+            console.log('AI klaar met spreken');
+          });
+          
+          vapiInstance.on('error', (e) => {
+            console.error('Vapi fout:', e);
+          });
+        };
+      })(document, "script");
+    </script>
+  </body>
+</html>

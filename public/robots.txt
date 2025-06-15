@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jonkersai.nl/sitemap.xml
+
+# Disallow admin pages
+Disallow: /admin/
+
+# Allow important pages
+Allow: /
+Allow: /blog
+Allow: /contact
+Allow: /book-demo

@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background: #000;
+  }
+
+  /* Improved text readability */
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes liquid-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translateY(-30px) translateX(20px) scale(1.2);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translateY(20px) translateX(-15px) scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulse-animation {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes liquid-morph {
+  0%, 100% { 
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% { 
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% { 
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+    transform: rotate(180deg) scale(0.9);
+  }
+  75% { 
+    border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%;
+    transform: rotate(270deg) scale(1.05);
+  }
+}
+
+@keyframes vapi-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+  }
+}
+
+@keyframes vapi-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), 0 0 40px rgba(99, 102, 241, 0.1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.5), 0 0 60px rgba(99, 102, 241, 0.2);
+  }
+}
+
+.animate-float {
+  animation: liquid-float linear infinite;
+}
+
+.animate-liquid-morph {
+  animation: liquid-morph 20s ease-in-out infinite;
+}
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 4px solid #6366f1;
+  white-space: nowrap;
+  width: 0;
+  animation: 
+    typing 3s steps(30, end) forwards,
+    blink 1s step-end infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.pulse-animation {
+  animation: pulse-animation 2s infinite ease-in-out;
+}
+
+.gradient-text {
+  background: linear-gradient(-45deg, #06b6d4, #3b82f6, #8b5cf6, #06b6d4);
+  background-size: 400% 400%;
+  animation: gradient-shift 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Spline viewer styles */
+spline-viewer {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Enhanced liquid glass button styles */
+.btn-primary {
+  @apply relative px-8 py-4 font-semibold text-white overflow-hidden
+         transition-all duration-300 rounded-2xl
+         focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50
+         disabled:opacity-50 disabled:cursor-not-allowed;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.8), rgba(59, 130, 246, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.9), rgba(59, 130, 246, 0.9));
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(6, 182, 212, 0.3);
+}
+
+.btn-secondary {
+  @apply relative px-8 py-4 font-semibold text-white overflow-hidden
+         transition-all duration-300 rounded-2xl
+         focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Liquid glass morphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 60px rgba(6, 182, 212, 0.1);
+}
+
+/* Feature card styles with liquid glass */
+.feature-card {
+  @apply relative p-8 transition-all duration-500 rounded-3xl overflow-hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card-icon {
+  @apply w-12 h-12 mb-6 transition-all duration-300;
+}
+
+.group:hover .feature-card-icon {
+  @apply transform scale-110;
+}
+
+/* Code styling */
+code {
+  @apply font-mono text-sm bg-gray-800/50 px-2 py-1 rounded;
+}
+
+pre {
+  @apply whitespace-pre-wrap bg-gray-900/50 p-4 rounded-lg border border-white/10;
+}
+
+/* Custom prose styles */
+.prose {
+  @apply text-gray-300 max-w-none;
+}
+
+.prose h1 {
+  @apply text-white text-3xl font-bold mb-6;
+}
+
+.prose h2 {
+  @apply text-white text-2xl font-semibold mb-4 mt-8;
+}
+
+.prose h3 {
+  @apply text-white text-xl font-medium mb-3 mt-6;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul {
+  @apply mb-4 space-y-2;
+}
+
+.prose li {
+  @apply leading-relaxed;
+}
+
+.prose a {
+  @apply text-indigo-400 hover:text-indigo-300 transition-colors;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-indigo-500 pl-4 italic text-gray-400;
+}
+
+/* Modern Vapi Button Styling with Liquid Glass */
+.vapi-btn {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  border: 2px solid rgba(6, 182, 212, 0.3) !important;
+  backdrop-filter: blur(30px) !important;
+  background: rgba(6, 182, 212, 0.15) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 9999 !important;
+  position: fixed !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.vapi-btn:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  border-color: rgba(6, 182, 212, 0.6) !important;
+  background: rgba(6, 182, 212, 0.25) !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(6, 182, 212, 0.3) !important;
+}
+
+.vapi-btn-pill {
+  border-radius: 50px !important;
+  padding: 16px 24px !important;
+  min-width: 180px !important;
+  max-width: 220px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+}
+
+.vapi-btn-round {
+  border-radius: 50% !important;
+  width: 70px !important;
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Enhanced animations for different states */
+.vapi-btn-is-idle {
+  animation: vapi-pulse 3s infinite ease-in-out !important;
+}
+
+.vapi-btn-is-idle:hover {
+  animation: vapi-glow 2s infinite ease-in-out !important;
+}
+
+.vapi-btn-is-loading {
+  background: rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  animation: vapi-pulse 1.5s infinite ease-in-out !important;
+}
+
+.vapi-btn-is-active {
+  background: rgba(239, 68, 68, 0.2) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  animation: vapi-pulse 1s infinite ease-in-out !important;
+}
+
+.vapi-btn-is-speaking {
+  background: rgba(34, 197, 94, 0.2) !important;
+  border-color: rgba(34, 197, 94, 0.4) !important;
+  animation: vapi-pulse 0.8s infinite ease-in-out !important;
+}
+
+/* Icon styling within the button */
+.vapi-btn svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+  transition: all 0.3s ease !important;
+}
+
+.vapi-btn:hover svg {
+  transform: scale(1.1) !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) !important;
+}
+
+/* Modern gradient text styling for Vapi button */
+.vapi-btn,
+.vapi-btn * {
+  color: transparent !important;
+  background: linear-gradient(-45deg, #06b6d4, #3b82f6, #8b5cf6, #10b981) !important;
+  background-size: 400% 400% !important;
+  animation: gradient-shift 4s ease infinite !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+/* Enhanced text styling for different states */
+.vapi-btn-is-idle,
+.vapi-btn-is-idle * {
+  background: linear-gradient(-45deg, #06b6d4, #3b82f6, #8b5cf6, #06b6d4) !important;
+  background-size: 400% 400% !important;
+  animation: gradient-shift 4s ease infinite !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.vapi-btn-is-loading,
+.vapi-btn-is-loading * {
+  background: linear-gradient(-45deg, #3b82f6, #6366f1, #8b5cf6, #06b6d4) !important;
+  background-size: 400% 400% !important;
+  animation: gradient-shift 2s ease infinite !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.vapi-btn-is-active,
+.vapi-btn-is-active * {
+  background: linear-gradient(-45deg, #ef4444, #f97316, #eab308, #dc2626) !important;
+  background-size: 400% 400% !important;
+  animation: gradient-shift 3s ease infinite !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.vapi-btn-is-speaking,
+.vapi-btn-is-speaking * {
+  background: linear-gradient(-45deg, #10b981, #059669, #06b6d4, #22c55e) !important;
+  background-size: 400% 400% !important;
+  animation: gradient-shift 2s ease infinite !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Specific text elements styling */
+.vapi-btn .vapi-btn-title {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.025em !important;
+}
+
+.vapi-btn .vapi-btn-subtitle {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  opacity: 0.9 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.025em !important;
+}
+
+/* Ensure the vapi container is above other elements */
+.vapi-container {
+  z-index: 9999 !important;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  .vapi-btn {
+    transform: scale(0.9) !important;
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+  
+  .vapi-btn-pill {
+    min-width: 160px !important;
+    max-width: 180px !important;
+    padding: 14px 20px !important;
+  }
+  
+  .vapi-btn-round {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .vapi-container {
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+}
+
+/* Custom scrollbar with liquid glass styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.5);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.7);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50;
+}
+
+/* Typography enhancements */
+.text-hero {
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.text-display {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* Enhanced gradient text with better contrast */
+.gradient-text-enhanced {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 25%, #8b5cf6 50%, #ec4899 75%, #06b6d4 100%);
+  background-size: 300% 300%;
+  animation: gradient-shift 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+}
+
+/* Responsive typography scaling */
+@media (max-width: 640px) {
+  .typing-animation {
+    border-right-width: 3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .typing-animation {
+    border-right-width: 5px;
+  }
+}
