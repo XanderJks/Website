@@ -84,6 +84,12 @@ export function Navigation() {
             {'>'} Features
           </button>
           <button 
+            onClick={() => scrollToSection('process')}
+            className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
+          >
+            {'>'} Proces
+          </button>
+          <button 
             onClick={() => scrollToSection('pricing')}
             className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
           >

@@ -318,6 +318,167 @@ export function Home() {
           </div>
         </section>
 
+        {/* Process Section */}
+        <section id="process" className="relative z-10 py-32" aria-labelledby="process-heading">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-24">
+              <div className="mb-8">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-purple-300 shadow-xl">
+                  <Sparkles size={16} className="mr-2" />
+                  Ons bewezen proces
+                </span>
+              </div>
+              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-600 drop-shadow-2xl">
+                Zo werken we samen_
+              </h2>
+              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+                Van eerste contact tot continue optimalisatie. Ontdek hoe we uw social media aanwezigheid transformeren in slechts 4 stappen.
+              </p>
+            </div>
+            
+            <div className="relative">
+              {/* Process line */}
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500/50 via-pink-500/50 to-cyan-500/50 transform -translate-y-1/2 hidden lg:block"></div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-0">
+                {[
+                  {
+                    step: '01',
+                    title: 'Onboarding & Intake',
+                    description: 'We beginnen met een uitgebreid intakegesprek om uw doelen, doelgroep en huidige social media aanwezigheid te begrijpen.',
+                    icon: Users,
+                    details: [
+                      'Strategiesessie van 60 minuten',
+                      'Analyse van huidige kanalen',
+                      'Doelgroep identificatie',
+                      'KPI\'s en doelstellingen vaststellen'
+                    ],
+                    gradient: 'from-purple-500/20 to-pink-500/20',
+                    iconColor: 'text-purple-400'
+                  },
+                  {
+                    step: '02',
+                    title: 'Discovery & Analyse',
+                    description: 'Diepgaande analyse van uw markt, concurrentie en kansen. We ontwikkelen een op maat gemaakte strategie.',
+                    icon: BarChart3,
+                    details: [
+                      'Marktonderzoek en trend analyse',
+                      'Concurrentieanalyse',
+                      'Content audit',
+                      'Strategisch plan ontwikkeling'
+                    ],
+                    gradient: 'from-pink-500/20 to-rose-500/20',
+                    iconColor: 'text-pink-400'
+                  },
+                  {
+                    step: '03',
+                    title: 'Ontwikkeling & Test',
+                    description: 'We bouwen uw gepersonaliseerde SocialFlows omgeving en testen alle functionaliteiten voordat we live gaan.',
+                    icon: Zap,
+                    details: [
+                      'Platform configuratie',
+                      'Content templates creëren',
+                      'Automatisering instellen',
+                      'Uitgebreide testing fase'
+                    ],
+                    gradient: 'from-rose-500/20 to-orange-500/20',
+                    iconColor: 'text-rose-400'
+                  },
+                  {
+                    step: '04',
+                    title: 'Launch & Onderhoud',
+                    description: 'Officiële lancering met continue monitoring, optimalisatie en ondersteuning voor maximale resultaten.',
+                    icon: Target,
+                    details: [
+                      'Zachte en volledige lancering',
+                      'Continue monitoring',
+                      'Maandelijkse rapportages',
+                      'Voortdurende optimalisatie'
+                    ],
+                    gradient: 'from-orange-500/20 to-cyan-500/20',
+                    iconColor: 'text-orange-400'
+                  }
+                ].map((step, index) => (
+                  <div key={index} className="relative lg:px-8">
+                    {/* Step number circle */}
+                    <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-8 lg:mb-12">
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-full border border-white/30 shadow-2xl`}></div>
+                      <span className="relative z-10 text-2xl font-black text-white drop-shadow-lg">{step.step}</span>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-full blur-xl opacity-50`}></div>
+                    </div>
+                    
+                    {/* Process card */}
+                    <div className="relative group">
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
+                      <div className="relative p-8 text-center">
+                        <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
+                          <step.icon className={`w-8 h-8 ${step.iconColor}`} aria-hidden="true" />
+                        </div>
+                        
+                        <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-lg">{step.title}</h3>
+                        <p className="text-white/80 mb-6 text-lg leading-relaxed">
+                          {step.description}
+                        </p>
+                        
+                        <ul className="space-y-3 text-left">
+                          {step.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <CheckCircle size={16} className="text-green-400 mr-3 mt-1 flex-shrink-0 drop-shadow-lg" aria-hidden="true" />
+                              <span className="text-white/90 text-sm">{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-all duration-500 -z-10`}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Timeline stats */}
+            <div className="mt-24 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
+                  <div className="relative p-6">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-2">
+                      2-4 weken
+                    </div>
+                    <div className="text-white/80 font-medium">
+                      Gemiddelde implementatietijd
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
+                  <div className="relative p-6">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500 mb-2">
+                      24/7
+                    </div>
+                    <div className="text-white/80 font-medium">
+                      Continue ondersteuning
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
+                  <div className="relative p-6">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-500 mb-2">
+                      95%
+                    </div>
+                    <div className="text-white/80 font-medium">
+                      Klanttevredenheid
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section id="pricing" ref={pricingRef} className="relative z-10 py-32" aria-labelledby="pricing-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
