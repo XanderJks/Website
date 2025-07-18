@@ -17,19 +17,19 @@ export const JsonLd: React.FC<JsonLdProps> = ({ data }) => {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "JonkersAI",
-  "description": "Transformeer uw telefonische klantenservice met AI.Callers. 24/7 beschikbare AI telefoonsystemen die natuurlijke gesprekken voeren en uw bedrijfsprocessen optimaliseren.",
-  "url": "https://jonkersai.nl",
-  "logo": "https://jonkersai.nl/terminal.svg",
+  "name": "SocialFlows",
+  "description": "Automatiseer uw social media marketing met SocialFlows. Intelligente content planning, automatische posting en geavanceerde analytics voor alle social media platforms.",
+  "url": "https://socialflows.nl",
+  "logo": "https://socialflows.nl/terminal.svg",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+31-6-12345678",
+    "telephone": "+31-20-123-4567",
     "contactType": "customer service",
     "availableLanguage": "Dutch"
   },
   "sameAs": [
-    "https://linkedin.com/company/jonkersai",
-    "https://twitter.com/jonkersai"
+    "https://linkedin.com/company/socialflows",
+    "https://twitter.com/socialflows"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -41,12 +41,12 @@ export const organizationSchema = {
 export const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "AI.Callers",
-  "description": "AI telefoonsystemen voor bedrijven die 24/7 natuurlijke gesprekken voeren",
+  "name": "SocialFlows",
+  "description": "Social media automatisering voor bedrijven met intelligente content planning en analytics",
   "provider": {
     "@type": "Organization",
-    "name": "JonkersAI",
-    "url": "https://jonkersai.nl"
+    "name": "SocialFlows",
+    "url": "https://socialflows.nl"
   },
   "areaServed": {
     "@type": "Country",
@@ -54,22 +54,22 @@ export const serviceSchema = {
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "AI Telefonie Services",
+    "name": "Social Media Automatisering Services",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "AI Klantenservice",
-          "description": "24/7 AI telefoonsysteem voor klantenservice"
+          "name": "Content Planning",
+          "description": "Intelligente content planning en scheduling"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "AI Afspraak Planning",
-          "description": "Automatische afspraak planning via AI telefoon"
+          "name": "Social Media Analytics",
+          "description": "Geavanceerde analytics en rapportages"
         }
       }
     ]
@@ -79,13 +79,13 @@ export const serviceSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "JonkersAI",
-  "url": "https://jonkersai.nl",
+  "name": "SocialFlows",
+  "url": "https://socialflows.nl",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://jonkersai.nl/blog?search={search_term_string}"
+      "urlTemplate": "https://socialflows.nl?search={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }

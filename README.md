@@ -1,49 +1,31 @@
-# JonkersAI Website
+# SocialFlows Website
 
-This is the official website for JonkersAI, featuring a blog, portfolio, and contact system.
+Dit is de officiële website voor SocialFlows, een platform voor social media automatisering en marketing.
 
 ## Getting Started
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
+1. Clone de repository
+2. Installeer dependencies: `npm install`
+3. Start de development server: `npm run dev`
 
-## Authentication
+## Project Structuur
 
-The system includes an admin panel accessible at `/admin`. 
-
-### Default Login Credentials
-- **Email**: admin@jonkersai.nl
-- **Password**: Xander12
-
-> **Important**: You should change this password after your first login for security reasons.
-
-### Admin Access
-Users with an email ending in `@jonkersai.nl` automatically have admin privileges.
-
-## Project Structure
-
-- `/src`: Application source code
-  - `/components`: Reusable UI components
-  - `/contexts`: React context providers
-  - `/pages`: Application pages
-  - `/lib`: Utility functions and libraries
-- `/public`: Static assets
-- `/supabase`: Supabase-related files
-  - `/migrations`: Database migration files
+- `/src`: Applicatie source code
+  - `/components`: Herbruikbare UI componenten
+  - `/pages`: Applicatie pagina's
+  - `/lib`: Utility functies en libraries
+- `/public`: Statische assets
 
 ## Features
 
-- Modern, responsive UI with dark theme
-- Blog system with rich text editor
-- Contact form with database integration
-- Admin panel for content management
-- Supabase integration for authentication and database
+- Modern, responsive UI met dark theme
+- Contact formulier
+- SEO geoptimaliseerd
+- Liquid glass design effecten
 
-## Technologies
+## Technologieën
 
 - React
 - TypeScript
 - Tailwind CSS
-- Supabase (Auth & Database)
 - Vite
