@@ -41,11 +41,15 @@ export function Navigation() {
                 Prijzen
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
+              <button onClick={() => scrollToSection('demo')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
+                Demo
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+              </button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
                 Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
-              <button onClick={() => scrollToSection('contact')} className="btn-primary text-sm group">
+              <button onClick={() => scrollToSection('demo')} className="btn-primary text-sm group">
                 Start Nu
               </button>
             </div>
@@ -96,13 +100,19 @@ export function Navigation() {
             Prijzen
           </button>
           <button 
+            onClick={() => scrollToSection('demo')}
+            className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
+          >
+            Demo
+          </button>
+          <button 
             onClick={() => scrollToSection('contact')}
             className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
           >
             Contact
           </button>
           <button 
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection('demo')}
             className="block px-4 py-3 glass-strong rounded-xl flex items-center font-medium group"
           >
             Start Nu

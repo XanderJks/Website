@@ -188,7 +188,7 @@ export function Home() {
                 {/* Liquid Glass Action Buttons */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
                   <button 
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
                     className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Start uw SocialFlows project"
                   >
@@ -588,7 +588,7 @@ export function Home() {
                     </ul>
                     
                     <button 
-                      onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                      onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
                       className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
                         plan.popular 
                           ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 shadow-lg hover:shadow-xl' 
@@ -618,6 +618,79 @@ export function Home() {
                 <div className="flex items-center">
                   <CheckCircle size={16} className="mr-2 text-green-400" />
                   <span>GDPR compliant</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        {/* Demo Meeting Section */}
+        <section id="demo" className="relative z-10 py-32" aria-labelledby="demo-heading">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="mb-8">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
+                  <Calendar size={16} className="mr-2" />
+                  Plan uw gratis demo
+                </span>
+              </div>
+              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 drop-shadow-2xl">
+                Ontdek hoe SocialFlows werkt
+              </h2>
+              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+                Boek een persoonlijke demo van 15 minuten en ontdek hoe onze Voice AI assistent uw restaurant kan transformeren.
+              </p>
+            </div>
+            
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 via-purple-600/30 to-pink-600/30 rounded-3xl blur-2xl"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
+                <div className="relative p-8 md:p-12">
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Wat u kunt verwachten in onze demo:
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                      <div className="flex items-center justify-center space-x-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-xl flex items-center justify-center">
+                          <Mic size={18} className="text-indigo-400" />
+                        </div>
+                        <span className="text-white/90 font-medium">Live AI Demo</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-xl flex items-center justify-center">
+                          <BarChart3 size={18} className="text-purple-400" />
+                        </div>
+                        <span className="text-white/90 font-medium">ROI Berekening</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-pink-500/30 to-indigo-500/30 rounded-xl flex items-center justify-center">
+                          <Target size={18} className="text-pink-400" />
+                        </div>
+                        <span className="text-white/90 font-medium">Custom Strategie</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Cal.com iframe */}
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
+                    <iframe
+                      src="https://cal.com/socialflows/demo"
+                      width="100%"
+                      height="600"
+                      className="rounded-xl"
+                      style={{ border: 'none' }}
+                      title="Plan uw SocialFlows demo"
+                    ></iframe>
+                  </div>
+                  
+                  <div className="text-center mt-8">
+                    <p className="text-white/60 text-sm">
+                      Geen verplichtingen • Gratis 15 minuten demo • Direct inzicht in mogelijkheden
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
