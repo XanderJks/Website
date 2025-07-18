@@ -557,7 +557,7 @@ export function Home() {
                   gradient: 'from-purple-500/20 to-pink-500/20'
                 }
               ].map((plan, index) => (
-                <div key={index} className={`relative group ${plan.popular ? 'scale-105' : ''}`}>
+                <div key={index} className={`relative group ${plan.popular ? 'scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                       <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
@@ -565,8 +565,8 @@ export function Home() {
                       </span>
                     </div>
                   )}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} backdrop-blur-xl rounded-3xl border ${plan.popular ? 'border-cyan-500/50' : 'border-white/20'} group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
-                  <div className="relative p-8 h-full">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} backdrop-blur-xl rounded-3xl border ${plan.popular ? 'border-cyan-500/50' : 'border-white/20'} group-hover:border-white/40 group-hover:shadow-2xl transition-all duration-500 shadow-2xl`}></div>
+                  <div className="relative p-8 h-full flex flex-col">
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                       <div className="flex items-baseline justify-center mb-4">
@@ -578,7 +578,7 @@ export function Home() {
                       <p className="text-white/70">{plan.description}</p>
                     </div>
                     
-                    <ul className="space-y-4 mb-8">
+                    <ul className="space-y-4 mb-8 flex-1">
                       {plan.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center">
                           <CheckCircle size={18} className="text-green-400 mr-3 flex-shrink-0" />
@@ -589,7 +589,7 @@ export function Home() {
                     
                     <button 
                       onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                      className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 ${
+                      className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
                         plan.popular 
                           ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 shadow-lg hover:shadow-xl' 
                           : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-white/30'
@@ -598,6 +598,8 @@ export function Home() {
                       Start Gratis Demo
                     </button>
                   </div>
+                  {/* Hover glow effect */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition-all duration-500 -z-10`}></div>
                 </div>
               ))}
             </div>
