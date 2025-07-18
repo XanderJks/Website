@@ -632,11 +632,11 @@ export function Home() {
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
                   <Calendar size={16} className="mr-2" />
-                  Plan uw gratis demo
+                  Plan uw demo meeting
                 </span>
               </div>
               <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 drop-shadow-2xl">
-                Ontdek hoe SocialFlows werkt
+                Plan uw persoonlijke demo
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 Boek een persoonlijke demo van 15 minuten en ontdek hoe onze Voice AI assistent uw restaurant kan transformeren.
@@ -700,21 +700,36 @@ export function Home() {
         {/* Contact Section */}
         <section id="contact" ref={contactRef} className="relative z-10 py-32" aria-labelledby="contact-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative">
+            <div className="text-center mb-16">
+              <div className="mb-8">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-cyan-300 shadow-xl">
+                  <MessageSquare size={16} className="mr-2" />
+                  Neem contact op
+                </span>
+              </div>
+              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-2xl">
+                Klaar om te beginnen?
+              </h2>
+              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+                Heeft u vragen of wilt u meer informatie? Neem direct contact met ons op via onderstaand formulier.
+              </p>
+            </div>
+            
+            <div className="relative max-w-6xl mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/30 via-blue-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
               <div className="relative">
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
-                <div className="relative p-16 md:p-20 overflow-hidden rounded-3xl">
+                <div className="relative p-12 md:p-16 overflow-hidden rounded-3xl">
                   <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-cyan-500/20 to-transparent rounded-full blur-3xl"></div>
                   <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
                   
-                  <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
+                  <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div>
-                      <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-2xl">
-                        Klaar om te beginnen?
-                      </h2>
-                      <p className="text-white/80 text-xl mb-10 leading-relaxed drop-shadow-sm">
-                        Start vandaag nog met een gratis demo en ontdek hoe onze AI assistent uw restaurant kan transformeren.
+                      <h3 className="text-3xl font-bold mb-6 text-white">
+                        Contactgegevens
+                      </h3>
+                      <p className="text-white/80 text-lg mb-8 leading-relaxed">
+                        Ons team staat klaar om al uw vragen te beantwoorden en u te helpen met de implementatie van uw Voice AI assistent.
                       </p>
                       
                       <div className="space-y-6 mb-10">
