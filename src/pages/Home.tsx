@@ -366,7 +366,7 @@ export function Home() {
                   {
                     step: '02',
                     title: 'Discovery & Analyse',
-                    description: 'Diepgaande analyse van uw huidige processen en identificatie van automatiseringsmogelijkheden.',
+                    description: 'Diepgaande analyse van uw huidige processen en identificatie van optimalisatie kansen.',
                     icon: BarChart3,
                     details: [
                       'Procesanalyse reserveringen',
