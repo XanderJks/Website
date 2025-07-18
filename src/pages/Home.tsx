@@ -406,7 +406,7 @@ export function Home() {
                     iconColor: 'text-orange-400'
                   }
                 ].map((step, index) => (
-                  <div key={index} className="relative lg:px-8">
+                  <div key={index} className="relative lg:px-8 flex flex-col">
                     {/* Step number circle */}
                     <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-8 lg:mb-12">
                       <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-full border border-white/30 shadow-2xl`}></div>
@@ -415,15 +415,15 @@ export function Home() {
                     </div>
                     
                     {/* Process card */}
-                    <div className="relative group">
+                    <div className="relative group flex-1 flex flex-col">
                       <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
-                      <div className="relative p-8 text-center">
+                      <div className="relative p-8 text-center flex-1 flex flex-col">
                         <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
                           <step.icon className={`w-8 h-8 ${step.iconColor}`} aria-hidden="true" />
                         </div>
                         
                         <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-lg">{step.title}</h3>
-                        <p className="text-white/80 mb-6 text-lg leading-relaxed">
+                        <p className="text-white/80 mb-6 text-lg leading-relaxed flex-1">
                           {step.description}
                         </p>
                         
