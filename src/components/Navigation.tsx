@@ -23,30 +23,30 @@ export function Navigation() {
           <div className="flex items-center">
             <a href="#" className="flex items-center group">
               <span className="text-2xl font-bold tracking-wider gradient-text group-hover:scale-105 transition-transform">
-                {'>'}_ SocialFlows
+                SocialFlows
               </span>
             </a>
           </div>
           <div className="hidden md:block">
             <div className="flex items-center space-x-8 tracking-wider text-sm font-medium">
               <button onClick={() => scrollToSection('home')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                {'>'} Over Ons
+                Over Ons
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                {'>'} Features
+                Features
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button onClick={() => scrollToSection('pricing')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                {'>'} Prijzen
+                Prijzen
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                {'>'} Contact
+                Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button onClick={() => scrollToSection('contact')} className="btn-primary text-sm group">
-                {'>'} Start Nu
+                Start Nu
               </button>
             </div>
           </div>
@@ -75,37 +75,37 @@ export function Navigation() {
             onClick={() => scrollToSection('home')}
             className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
           >
-            {'>'} Over Ons
+            Over Ons
           </button>
           <button 
             onClick={() => scrollToSection('features')}
             className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
           >
-            {'>'} Features
+            Features
           </button>
           <button 
             onClick={() => scrollToSection('process')}
             className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
           >
-            {'>'} Proces
+            Proces
           </button>
           <button 
             onClick={() => scrollToSection('pricing')}
             className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
           >
-            {'>'} Prijzen
+            Prijzen
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
             className="block px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
           >
-            {'>'} Contact
+            Contact
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
             className="block px-4 py-3 glass-strong rounded-xl flex items-center font-medium group"
           >
-            {'>'} Start Nu
+            Start Nu
           </button>
         </div>
       </div>

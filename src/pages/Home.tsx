@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { 
-  Share2, 
+  Phone, 
   CheckCircle, 
   Users, 
   Clock, 
@@ -20,9 +20,16 @@ import {
   Linkedin,
   Youtube,
   Mail,
-  Phone,
   MapPin,
-  Star
+  Star,
+  Mic,
+  Bot,
+  HeadphonesIcon,
+  PhoneCall,
+  ChefHat,
+  Utensils,
+  Coffee,
+  Crown
 } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
@@ -70,11 +77,11 @@ export function Home() {
   return (
     <>
       <SEOHead
-        title="SocialFlows - Social Media Automatisering voor Bedrijven"
-        description="Automatiseer uw social media marketing met SocialFlows. Intelligente content planning, automatische posting en geavanceerde analytics voor alle social media platforms. Bespaar tijd en verhoog uw online aanwezigheid."
-        keywords="social media automatisering, content planning, social media marketing, automatische posting, social media tools, Instagram automatisering, Facebook marketing, LinkedIn marketing, Nederland, bedrijfsoplossingen"
+        title="SocialFlows - Voice AI Assistenten voor Restaurants"
+        description="Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie. Verhoog uw omzet en verbeter de klantervaring."
+        keywords="voice AI, restaurant automatisering, AI assistent, reserveringen, bestellingen, klantenservice, spraaktechnologie, horeca automatisering, restaurant AI, Nederland"
         url="https://socialflows.nl"
-        image="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&h=630&fit=crop"
+        image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=630&fit=crop"
       />
       
       <main className="relative min-h-screen overflow-hidden">
@@ -143,8 +150,8 @@ export function Home() {
                 {/* Overline with liquid glass effect */}
                 <div className="mb-8">
                   <span className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-cyan-300 tracking-wide uppercase shadow-2xl">
-                    <Share2 size={16} className="mr-3 text-cyan-400" />
-                    De toekomst van social media marketing
+                    <Mic size={16} className="mr-3 text-cyan-400" />
+                    De toekomst van restaurant service
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-xl"></div>
                   </span>
                 </div>
@@ -154,7 +161,7 @@ export function Home() {
                   {/* Primary Headline with enhanced glass effect */}
                   <div className="relative">
                     <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-2xl">
-                      SocialFlows_
+                      SocialFlows
                     </h1>
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-500/20 to-purple-600/20 blur-3xl -z-10"></div>
                   </div>
@@ -164,15 +171,15 @@ export function Home() {
                     <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl"></div>
                     <div className="relative p-8 text-xl sm:text-2xl lg:text-3xl font-light text-white/90 leading-tight">
                       <span className="block mb-3">
-                        Automatiseer uw social media marketing
+                        Voice AI assistenten voor restaurants
                       </span>
                       <span className="block">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 font-medium">
-                          met intelligente content planning
+                          Automatiseer reserveringen en bestellingen
                         </span>
                       </span>
                       <span className="block mt-3 text-lg lg:text-xl text-white/70">
-                        zodat u zich kunt focussen op het groeien van uw bedrijf
+                        zodat u zich kunt focussen op geweldige gerechten
                       </span>
                     </div>
                   </div>
@@ -187,7 +194,7 @@ export function Home() {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl"></div>
                     <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
-                    <span className="relative z-10 font-bold text-white drop-shadow-lg">Start Gratis Trial</span>
+                    <span className="relative z-10 font-bold text-white drop-shadow-lg">Start Gratis Demo</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/50 to-blue-500/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
                   </button>
                   
@@ -205,10 +212,10 @@ export function Home() {
                 {/* Liquid Glass Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
                   {[
-                    { value: '500+', label: 'Tevreden klanten' },
-                    { value: '24/7', label: 'Automatisering' },
-                    { value: '85%', label: 'Tijdsbesparing' },
-                    { value: '10+', label: 'Social platforms' }
+                    { value: '200+', label: 'Tevreden restaurants' },
+                    { value: '24/7', label: 'AI beschikbaar' },
+                    { value: '90%', label: 'Meer reserveringen' },
+                    { value: '15+', label: 'Talen ondersteund' }
                   ].map((stat, index) => (
                     <div key={index} className="relative group">
                       <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300"></div>
@@ -235,60 +242,60 @@ export function Home() {
             <div className="text-center mb-24">
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-cyan-300 shadow-xl">
-                  <Zap size={16} className="mr-2" />
-                  Krachtige automatisering
+                  <Bot size={16} className="mr-2" />
+                  Geavanceerde AI technologie
                 </span>
               </div>
               <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-2xl">
-                Alles wat u nodig heeft_
+                Alles wat uw restaurant nodig heeft
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
-                SocialFlows biedt een complete suite van tools om uw social media marketing te automatiseren en optimaliseren.
+                SocialFlows biedt een complete AI-assistent die uw restaurant helpt met telefonische bestellingen, reserveringen en klantenservice.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: Calendar,
-                  title: 'Intelligente Content Planning',
-                  description: 'Plan en schedule uw content automatisch op het beste moment voor maximale engagement.',
-                  features: ['AI-gestuurde timing', 'Bulk scheduling', 'Content kalender'],
+                  icon: PhoneCall,
+                  title: 'Automatische Reserveringen',
+                  description: 'Onze AI neemt telefonische reserveringen aan, checkt beschikbaarheid en bevestigt direct in uw systeem.',
+                  features: ['24/7 beschikbaar', 'Multilingual support', 'Agenda integratie'],
                   gradient: 'from-cyan-500/20 to-blue-500/20'
+                },
+                {
+                  icon: Utensils,
+                  title: 'Telefoonbestellingen',
+                  description: 'Klanten kunnen hun favoriete gerechten bestellen via telefoon, compleet met personalisatie en upselling.',
+                  features: ['Menu integratie', 'Upselling suggesties', 'Betaling processing'],
+                  gradient: 'from-purple-500/20 to-pink-500/20'
+                },
+                {
+                  icon: HeadphonesIcon,
+                  title: 'Klantenservice',
+                  description: 'Beantwoord veelgestelde vragen, geef informatie over openingstijden en help klanten met hun behoeften.',
+                  features: ['FAQ database', 'Doorschakeling naar personeel', 'Klantgeschiedenis'],
+                  gradient: 'from-emerald-500/20 to-teal-500/20'
                 },
                 {
                   icon: BarChart3,
                   title: 'Geavanceerde Analytics',
-                  description: 'Krijg diepgaande inzichten in uw social media performance met real-time rapportages.',
-                  features: ['Real-time statistieken', 'ROI tracking', 'Competitor analyse'],
-                  gradient: 'from-purple-500/20 to-pink-500/20'
-                },
-                {
-                  icon: Users,
-                  title: 'Multi-Platform Beheer',
-                  description: 'Beheer al uw social media accounts vanaf één centraal dashboard.',
-                  features: ['10+ platforms', 'Unified inbox', 'Team collaboration'],
-                  gradient: 'from-emerald-500/20 to-teal-500/20'
-                },
-                {
-                  icon: TrendingUp,
-                  title: 'AI Content Optimalisatie',
-                  description: 'Onze AI analyseert wat werkt en optimaliseert automatisch uw content voor betere resultaten.',
-                  features: ['Hashtag suggesties', 'Content A/B testing', 'Performance voorspelling'],
+                  description: 'Krijg inzicht in gesprekken, popular gerechten en klantgedrag om uw service te optimaliseren.',
+                  features: ['Gespreksanalyse', 'Populariteit tracking', 'Performance metrics'],
                   gradient: 'from-orange-500/20 to-red-500/20'
                 },
                 {
-                  icon: Shield,
-                  title: 'Brand Safety & Compliance',
-                  description: 'Bescherm uw merk met automatische content moderatie en compliance checks.',
-                  features: ['Content filtering', 'Brand guidelines', 'Approval workflows'],
+                  icon: Crown,
+                  title: 'Merkpersonalisatie',
+                  description: 'Onze AI past zich aan uw restaurant aan met gepersonaliseerde begroetingen en merkspecifieke taal.',
+                  features: ['Custom greeting', 'Brand voice', 'Menu kennis'],
                   gradient: 'from-indigo-500/20 to-purple-500/20'
                 },
                 {
-                  icon: MessageSquare,
-                  title: 'Social Listening',
-                  description: 'Monitor mentions, trends en sentiment rond uw merk in real-time.',
-                  features: ['Mention tracking', 'Sentiment analyse', 'Crisis management'],
+                  icon: Shield,
+                  title: 'Betrouwbaar & Veilig',
+                  description: 'GDPR-compliant met enterprise-grade beveiliging en 99.9% uptime garantie.',
+                  features: ['GDPR compliant', 'Data encryptie', '99.9% uptime'],
                   gradient: 'from-pink-500/20 to-rose-500/20'
                 }
               ].map((feature, index) => (
@@ -329,10 +336,10 @@ export function Home() {
                 </span>
               </div>
               <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-600 drop-shadow-2xl">
-                Zo werken we samen_
+                Zo implementeren we uw AI assistent
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
-                Van eerste contact tot continue optimalisatie. Ontdek hoe we uw social media aanwezigheid transformeren in slechts 4 stappen.
+                Van eerste gesprek tot volledige implementatie. Ontdek hoe we uw restaurant transformeren in slechts 4 stappen.
               </p>
             </div>
             
@@ -345,13 +352,13 @@ export function Home() {
                   {
                     step: '01',
                     title: 'Onboarding & Intake',
-                    description: 'We beginnen met een uitgebreid intakegesprek om uw doelen, doelgroep en huidige social media aanwezigheid te begrijpen.',
+                    description: 'We beginnen met een uitgebreid gesprek om uw restaurant, menu en klantenwensen te begrijpen.',
                     icon: Users,
                     details: [
-                      'Strategiesessie van 60 minuten',
-                      'Analyse van huidige kanalen',
-                      'Doelgroep identificatie',
-                      'KPI\'s en doelstellingen vaststellen'
+                      'Restaurant strategie sessie',
+                      'Menu en service analyse',
+                      'Klantprofiel opstellen',
+                      'Doelstellingen vaststellen'
                     ],
                     gradient: 'from-purple-500/20 to-pink-500/20',
                     iconColor: 'text-purple-400'
@@ -359,27 +366,27 @@ export function Home() {
                   {
                     step: '02',
                     title: 'Discovery & Analyse',
-                    description: 'Diepgaande analyse van uw markt, concurrentie en kansen. We ontwikkelen een op maat gemaakte strategie.',
+                    description: 'Diepgaande analyse van uw huidige processen en identificatie van automatiseringsmogelijkheden.',
                     icon: BarChart3,
                     details: [
-                      'Marktonderzoek en trend analyse',
-                      'Concurrentieanalyse',
-                      'Content audit',
-                      'Strategisch plan ontwikkeling'
+                      'Procesanalyse reserveringen',
+                      'Menu digitalisatie',
+                      'Klantjourney mapping',
+                      'AI strategie ontwikkeling'
                     ],
                     gradient: 'from-pink-500/20 to-rose-500/20',
                     iconColor: 'text-pink-400'
                   },
                   {
                     step: '03',
-                    title: 'Ontwikkeling & Test',
-                    description: 'We bouwen uw gepersonaliseerde SocialFlows omgeving en testen alle functionaliteiten voordat we live gaan.',
-                    icon: Zap,
+                    title: 'Ontwikkeling & Training',
+                    description: 'We bouwen en trainen uw gepersonaliseerde AI assistent met uw menu en restaurant informatie.',
+                    icon: Bot,
                     details: [
-                      'Platform configuratie',
-                      'Content templates creëren',
-                      'Automatisering instellen',
-                      'Uitgebreide testing fase'
+                      'AI assistent configuratie',
+                      'Menu training',
+                      'Stem en persoonlijkheid',
+                      'Uitgebreide test fase'
                     ],
                     gradient: 'from-rose-500/20 to-orange-500/20',
                     iconColor: 'text-rose-400'
@@ -387,13 +394,13 @@ export function Home() {
                   {
                     step: '04',
                     title: 'Launch & Onderhoud',
-                    description: 'Officiële lancering met continue monitoring, optimalisatie en ondersteuning voor maximale resultaten.',
-                    icon: Target,
+                    description: 'Lancering met telefoonnummer overdracht en continue monitoring voor optimale prestaties.',
+                    icon: PhoneCall,
                     details: [
-                      'Zachte en volledige lancering',
-                      'Continue monitoring',
-                      'Maandelijkse rapportages',
-                      'Voortdurende optimalisatie'
+                      'Telefoonnummer setup',
+                      'Soft launch periode',
+                      'Performance monitoring',
+                      'Continue optimalisatie'
                     ],
                     gradient: 'from-orange-500/20 to-cyan-500/20',
                     iconColor: 'text-orange-400'
@@ -443,7 +450,7 @@ export function Home() {
                   <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
                   <div className="relative p-6">
                     <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-2">
-                      2-4 weken
+                      1-2 weken
                     </div>
                     <div className="text-white/80 font-medium">
                       Gemiddelde implementatietijd
@@ -458,7 +465,7 @@ export function Home() {
                       24/7
                     </div>
                     <div className="text-white/80 font-medium">
-                      Continue ondersteuning
+                      AI beschikbaarheid
                     </div>
                   </div>
                 </div>
@@ -467,10 +474,10 @@ export function Home() {
                   <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
                   <div className="relative p-6">
                     <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-500 mb-2">
-                      95%
+                      98%
                     </div>
                     <div className="text-white/80 font-medium">
-                      Klanttevredenheid
+                      Klantentevredenheid
                     </div>
                   </div>
                 </div>
@@ -490,60 +497,60 @@ export function Home() {
                 </span>
               </div>
               <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 drop-shadow-2xl">
-                Kies uw plan_
+                Kies uw AI assistent plan
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
-                Start gratis en upgrade wanneer u klaar bent om te groeien. Alle plannen bevatten een 14-daagse gratis proefperiode.
+                Start met onze gratis demo en upgrade naar een plan dat past bij uw restaurant. Alle plannen bevatten setup en training.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
                 {
-                  name: 'Starter',
-                  price: '€29',
+                  name: 'Basic',
+                  price: '€149',
                   period: '/maand',
-                  description: 'Perfect voor kleine bedrijven die net beginnen',
+                  description: 'Perfect voor kleine restaurants met beperkte telefonische service',
                   features: [
-                    '3 social media accounts',
-                    '50 posts per maand',
-                    'Basis analytics',
+                    'Tot 200 gesprekken/maand',
+                    'Basis reserveringen',
+                    'Nederlandse taal',
                     'Email support',
-                    'Content kalender'
+                    'Basis analytics'
                   ],
                   popular: false,
                   gradient: 'from-gray-500/20 to-gray-600/20'
                 },
                 {
                   name: 'Professional',
-                  price: '€79',
+                  price: '€299',
                   period: '/maand',
-                  description: 'Ideaal voor groeiende bedrijven met meer behoeften',
+                  description: 'Ideaal voor middelgrote restaurants met actieve telefonische service',
                   features: [
-                    '10 social media accounts',
-                    '200 posts per maand',
-                    'Geavanceerde analytics',
+                    'Tot 1000 gesprekken/maand',
+                    'Reserveringen + bestellingen',
+                    'Meertalig (NL/EN/DE)',
                     'Priority support',
-                    'AI content optimalisatie',
-                    'Team collaboration',
-                    'Social listening'
+                    'Geavanceerde analytics',
+                    'Menu integratie',
+                    'Upselling features'
                   ],
                   popular: true,
                   gradient: 'from-cyan-500/20 to-blue-500/20'
                 },
                 {
                   name: 'Enterprise',
-                  price: '€199',
+                  price: '€599',
                   period: '/maand',
-                  description: 'Voor grote organisaties met complexe behoeften',
+                  description: 'Voor grote restaurants en ketens met hoge call volumes',
                   features: [
-                    'Onbeperkte accounts',
-                    'Onbeperkte posts',
-                    'Custom analytics',
+                    'Onbeperkte gesprekken',
+                    'Volledig AI platform',
+                    'Alle talen',
                     'Dedicated support',
-                    'White-label oplossing',
-                    'API toegang',
                     'Custom integraties',
+                    'Wit-label oplossing',
+                    'API toegang',
                     'SLA garantie'
                   ],
                   popular: false,
@@ -588,7 +595,7 @@ export function Home() {
                           : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-white/30'
                       }`}
                     >
-                      Start Gratis Trial
+                      Start Gratis Demo
                     </button>
                   </div>
                 </div>
@@ -596,7 +603,7 @@ export function Home() {
             </div>
             
             <div className="text-center mt-16">
-              <p className="text-white/60 mb-4">Alle plannen bevatten een 14-daagse gratis proefperiode. Geen setup kosten.</p>
+              <p className="text-white/60 mb-4">Alle plannen bevatten volledige setup en training. Geen verborgen kosten.</p>
               <div className="flex items-center justify-center space-x-8 text-white/40">
                 <div className="flex items-center">
                   <CheckCircle size={16} className="mr-2 text-green-400" />
@@ -604,11 +611,11 @@ export function Home() {
                 </div>
                 <div className="flex items-center">
                   <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span>24/7 support</span>
+                  <span>24/7 AI beschikbaar</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span>SSL beveiligd</span>
+                  <span>GDPR compliant</span>
                 </div>
               </div>
             </div>
@@ -629,10 +636,10 @@ export function Home() {
                   <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div>
                       <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-2xl">
-                        Klaar om te beginnen?_
+                        Klaar om te beginnen?
                       </h2>
                       <p className="text-white/80 text-xl mb-10 leading-relaxed drop-shadow-sm">
-                        Start vandaag nog met uw gratis 14-daagse proefperiode en ontdek hoe SocialFlows uw social media marketing kan transformeren.
+                        Start vandaag nog met een gratis demo en ontdek hoe onze AI assistent uw restaurant kan transformeren.
                       </p>
                       
                       <div className="space-y-6 mb-10">
@@ -710,11 +717,11 @@ export function Home() {
                         </div>
                         
                         <div>
-                          <label className="block text-sm font-medium mb-2 text-white/90">Bedrijf</label>
+                          <label className="block text-sm font-medium mb-2 text-white/90">Restaurant</label>
                           <input
                             type="text"
                             className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-cyan-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm"
-                            placeholder="Uw bedrijfsnaam"
+                            placeholder="Uw restaurant naam"
                           />
                         </div>
                         
@@ -724,7 +731,7 @@ export function Home() {
                             rows={4}
                             required
                             className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-cyan-400 outline-none transition-all text-white resize-none rounded-xl backdrop-blur-sm"
-                            placeholder="Vertel ons over uw social media doelen..."
+                            placeholder="Vertel ons over uw restaurant en hoe we kunnen helpen..."
                           ></textarea>
                         </div>
                         

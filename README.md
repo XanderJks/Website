@@ -1,6 +1,6 @@
 # SocialFlows Website
 
-Dit is de officiële website voor SocialFlows, een platform voor social media automatisering en marketing.
+Dit is de officiële website voor SocialFlows, een platform voor Voice AI assistenten voor restaurants.
 
 ## Getting Started
 
@@ -22,6 +22,7 @@ Dit is de officiële website voor SocialFlows, een platform voor social media au
 - Contact formulier
 - SEO geoptimaliseerd
 - Liquid glass design effecten
+- Voice AI focus voor restaurants
 
 ## Technologieën
 
@@ -29,3 +30,11 @@ Dit is de officiële website voor SocialFlows, een platform voor social media au
 - TypeScript
 - Tailwind CSS
 - Vite
+
+## Focus
+
+SocialFlows helpt restaurants met:
+- Automatische telefonische reserveringen
+- AI-gestuurde bestellingen
+- 24/7 klantenservice
+- Meertalige ondersteuning

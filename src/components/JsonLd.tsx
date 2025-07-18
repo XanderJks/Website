@@ -18,7 +18,7 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "SocialFlows",
-  "description": "Automatiseer uw social media marketing met SocialFlows. Intelligente content planning, automatische posting en geavanceerde analytics voor alle social media platforms.",
+  "description": "Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie.",
   "url": "https://socialflows.nl",
   "logo": "https://socialflows.nl/terminal.svg",
   "contactPoint": {
@@ -42,7 +42,7 @@ export const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "SocialFlows",
-  "description": "Social media automatisering voor bedrijven met intelligente content planning en analytics",
+  "description": "Voice AI assistenten voor restaurants met automatische reserveringen en bestellingen",
   "provider": {
     "@type": "Organization",
     "name": "SocialFlows",
@@ -54,22 +54,22 @@ export const serviceSchema = {
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Social Media Automatisering Services",
+    "name": "Voice AI Restaurant Services",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Content Planning",
-          "description": "Intelligente content planning en scheduling"
+          "name": "Automatische Reserveringen",
+          "description": "AI-gestuurde telefonische reserveringen"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Social Media Analytics",
-          "description": "Geavanceerde analytics en rapportages"
+          "name": "Telefoonbestellingen",
+          "description": "Automatische bestellingen via AI assistent"
         }
       }
     ]
