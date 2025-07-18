@@ -764,23 +764,6 @@ export function Home() {
                         </div>
                       </div>
                       
-                      <div className="flex space-x-4">
-                        {[
-                          { icon: Instagram, href: '#', color: 'from-pink-500 to-purple-500' },
-                          { icon: Facebook, href: '#', color: 'from-blue-600 to-blue-700' },
-                          { icon: Twitter, href: '#', color: 'from-sky-400 to-sky-500' },
-                          { icon: Linkedin, href: '#', color: 'from-blue-700 to-blue-800' },
-                          { icon: Youtube, href: '#', color: 'from-red-500 to-red-600' }
-                        ].map((social, index) => (
-                          <a
-                            key={index}
-                            href={social.href}
-                            className={`w-12 h-12 bg-gradient-to-br ${social.color} rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg`}
-                          >
-                            <social.icon size={20} className="text-white" />
-                          </a>
-                        ))}
-                      </div>
                     </div>
                     
                     <div>
